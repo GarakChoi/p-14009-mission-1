@@ -3,7 +3,7 @@ package com.back;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
-
+// 6단계 명언삭제
 public class wise6 {
     public static void main(String[] args) {
         System.out.println("== 명언 앱 ==");
@@ -33,6 +33,17 @@ public class wise6 {
                 for (int i = wiseList.size() - 1; i >= 0; i--) {
                     System.out.println(wiseList.get(i));
                 }
+            } else if (cmd.startsWith("삭제?id=")) {
+                int delete_id = Integer.parseInt(cmd.split("=")[1]);
+                for (int i = 0; i < wiseList.size(); i++){
+                    int wise_id = Integer.parseInt(wiseList.get(i).split(" / ")[0]);
+
+                    if (wise_id == delete_id){
+                        wiseList.remove(i);
+                        System.out.println(delete_id + "번 명언이 삭제되었습니다.");
+                    }
+                }
+
             }
         }
 

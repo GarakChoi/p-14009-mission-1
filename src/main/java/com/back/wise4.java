@@ -1,7 +1,7 @@
 package com.back;
 
 import java.util.Scanner;
-
+// 4단계 명언번호 증가
 public class wise4 {
     public static void main(String[] args) {
         System.out.println("== 명언 앱 ==");

@@ -1,7 +1,7 @@
 package com.back;
 
 import java.util.Scanner;
-
+// 3단계 명언번호 노출
 public class wise3 {
     public static void main(String[] args) {
         System.out.println("== 명언 앱 ==");
