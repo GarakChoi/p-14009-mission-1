@@ -5,7 +5,7 @@ import java.util.List;
 import java.util.Scanner;
 
 // 8단계 수정기능추가
-public class wise8 {
+public class wise9 {
     public static void main(String[] args) {
         System.out.println("== 명언 앱 ==");
 
