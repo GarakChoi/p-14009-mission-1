@@ -3,7 +3,7 @@ package com.back;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
-
+// 5단계 목록
 public class wise5 {
     public static void main(String[] args) {
         System.out.println("== 명언 앱 ==");
