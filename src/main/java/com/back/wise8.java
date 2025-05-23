@@ -3,8 +3,9 @@ package com.back;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
-// 7단계 예외처리
-public class wise7 {
+
+// 8단계 수정
+public class wise8 {
     public static void main(String[] args) {
         System.out.println("== 명언 앱 ==");
 
@@ -50,6 +51,32 @@ public class wise7 {
 
                 if (d == 0) {
                     System.out.println(delete_id + "번 명언은 존재하지 않습니다.");
+                }
+            } else if (cmd.startsWith("수정?id=")) {
+                int modify_id = Integer.parseInt(cmd.split("=")[1]);
+                int c = 0;
+
+                for (int i = 0; i < wiseList.size(); i++) {
+                    String[] parts = wiseList.get(i).split(" / ");
+                    int wise_id = Integer.parseInt(parts[0]);
+
+                    if (wise_id == modify_id) {
+                        System.out.println("명언(기존) : " + parts[2]);
+                        System.out.print("명언 : ");
+                        String newContent = scanner.nextLine().trim();
+
+                        System.out.println("작가(기존) : " + parts[1]);
+                        System.out.print("작가 : ");
+                        String newAuthor  = scanner.nextLine().trim();
+
+                        wiseList.set(i, modify_id + " / " + newAuthor + " / " + newContent);
+                        c++;
+                        break;
+                    }
+                }
+
+                if (c == 0) {
+                    System.out.println(modify_id + "번 명언은 존재하지 않습니다.");
                 }
             }
 
